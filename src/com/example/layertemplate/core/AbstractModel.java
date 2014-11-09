@@ -14,7 +14,7 @@ public abstract class AbstractModel<T> implements Model<T> {
 	
 	@Override
 	public void regist(T observee) {
-		if (!this.observees.contains(observee)) {
+		if (this.observees.contains(observee)) {
 			this.observees.add(observee);
 		}
 	}
