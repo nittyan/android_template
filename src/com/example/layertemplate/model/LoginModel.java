@@ -15,8 +15,12 @@ public class LoginModel extends AbstractModel<LoginModel.Observee> {
 	}	
 	
 	public void login(Form form) {
+		this.notifyObservee(Event.SUCCESS);
+	}
+	
+	private void notifyObservee(Event event) {
 		for (Observee observee: super.observees) {
-			observee.logginSuccessed();
+			observee.login(event);
 		}
 	}
 	
@@ -30,8 +34,11 @@ public class LoginModel extends AbstractModel<LoginModel.Observee> {
 		}
 	}
 	
+	public static enum Event {
+		SUCCESS, FAIL
+	}
+	
 	public interface Observee {
-		public void logginSuccessed();
-		public void logginFailed();		
+		public void login(Event event);		
 	}
 }

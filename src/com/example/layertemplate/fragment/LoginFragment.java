@@ -2,6 +2,7 @@ package com.example.layertemplate.fragment;
 
 import com.example.layertemplate.R;
 import com.example.layertemplate.model.LoginModel;
+import com.example.layertemplate.model.LoginModel.Event;
 
 import android.app.Fragment;
 import android.os.Bundle;
@@ -82,14 +83,8 @@ public class LoginFragment extends Fragment implements LoginModel.Observee {
 	}
 
 	@Override
-	public void logginSuccessed() {
-		// TODO Auto-generated method stub
+	public void login(Event event) {
 		
 	}
 
-	@Override
-	public void logginFailed() {
-		// TODO Auto-generated method stub
-		
-	}
 }

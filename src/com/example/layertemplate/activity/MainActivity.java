@@ -26,11 +26,10 @@ public class MainActivity extends Activity implements LoginModel.Observee {
 	}
 	
 	@Override
-	public void logginSuccessed() {		
-	}
-
-	@Override
-	public void logginFailed() {		
+	public void login(LoginModel.Event event) {
+		if (LoginModel.Event.SUCCESS == event) {
+			
+		}
 	}
 
 }
